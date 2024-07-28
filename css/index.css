@@ -46,9 +46,10 @@ margin-bottom: 40px;
 .noTravels{
     text-align: center;
 }
-.resultRow{
-margin: 0 19vw;
-clear: both;
+.resultDiv{
+margin: 0 20vw;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
 }
 .card {
     width: 20vw;

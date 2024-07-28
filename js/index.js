@@ -1,10 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {//evento criado para carregar coisas padrões como as opções de cidades tanto de origem como de destino e os pacotes em si
-    addOptions("location","destiny")//chamando a variavel que adiciona as opções nos selects enviando o id do select e o elemento do travel que ele deve pegar
-    addOptions("origin","origin");
-    buildCards(travel);
+    setTravels();
 });
+let travel;
 
-
+function setTravels(){
+    const ajax = new XMLHttpRequest()
+    ajax.open('GET', './json/travels.json')
+    ajax.onreadystatechange = () => {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+            const JSONTravels = ajax.responseText
+            travel = JSON.parse(JSONTravels)
+            addOptions("location","destiny")//chamando a variavel que adiciona as opções nos selects enviando o id do select e o elemento do travel que ele deve pegar
+            addOptions("origin","origin");
+            buildCards(travel);
+        }
+    }
+    ajax.send()
+    console.log(travel)
+}
 
 
 function addOptions(selectId,travelElement) {
@@ -32,36 +45,28 @@ function addOptions(selectId,travelElement) {
 function buildCards(datas) {
     resetResult();
     let result= document.getElementById("result");//pegar o select que ficará os cards para inserir
-    let rows=Math.ceil(datas.length/3);//rows ficará com a quantidade de linhas que deve ser feita
-    let count=0;//count para contar em qual posição esta no for
-    for (let i = 0; i < rows; i++) {//for para crias as linhas(de até 3 elementos)
-        rowElement=document.createElement('div');
-        rowElement.classList.add("resultRow");//comando para adicionar a classe resultRow na div
-        for (let u = 0; u < 3; u++) {//for para criar os cards em si se limitando a 3
-            if(count==datas.length){break;}//verificação de se ainda tem elementos para inserir
+        resultDiv=document.createElement('div');
+        resultDiv.classList.add("resultDiv");//comando para adicionar a classe resultRow na div
+        for (const data of datas) {
             let card=document.createElement('div');
-            if(u==2 || (count+1)==datas.length){card.classList.add("card")}//verificando se o elemento é o ultimo ou se é o terceiro para não adicionar a margem para a direita
-            else{card.classList.add("card","cardMargin")}
-            let id=datas[count].id;//variavel criada para enviar como parametro no evento do card
+            card.classList.add("card")
+            let id=data.id;//variavel criada para enviar como parametro no evento do card
             card.addEventListener("click", function(){buyTicket(id)});//card montado
             let title=document.createElement("h2");
             title.classList.add("cardTitle")
-            title.innerHTML=datas[count].destiny;//titulo montado
+            title.innerHTML=data.destiny;//titulo montado
             let origin=document.createElement("p")
-            origin.innerHTML="Origem: "+datas[count].origin;//local de origem montado
+            origin.innerHTML="Origem: "+data.origin;//local de origem montado
             let cust=document.createElement("p")
-            cust.innerHTML="Custo: R$"+datas[count].cost;//custo da viagem montado
+            cust.innerHTML="Custo: R$"+data.cost;//custo da viagem montado
             let description=document.createElement("p")
-            description.innerHTML=datas[count].description;//descrição montada
-
+            description.innerHTML=data.description;//descrição montada
             //iniciando inserção dos dados
             card.append(title,origin,cust,description);//inserção dos dados no card
-            rowElement.append(card)//inserção do card na linha
-            count++;
+            resultDiv.append(card)//inserção do card na linha
         }
-    result.append(rowElement);//inserção da linha na parte dos resultados
+        result.append(resultDiv);//inserção da linha na parte dos resultados
     }
-}
 
 
 function resetResult() {
