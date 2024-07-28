@@ -1,0 +1,57 @@
+/*GERAL*/
+body{
+    background: #5c99c7 url(../img/Fundo.png) repeat-x;
+    margin: 0;
+}
+header{
+    height: 70px;
+}
+#container{
+    width: 100%;
+    margin: 0 auto;
+    min-height: 91vh;
+}
+#main{
+    margin-top: 70px;
+}
+a:link, a:active, a:visited{
+    color: #ffffff;
+    text-decoration: none;
+}
+/*Links Cabeçalho*/
+header a:hover{
+    color:#000000;
+    border-bottom: 1px solid #535858;
+}
+/*LOGO*/
+#logo{
+margin-left: 20px;
+font-size: 25px;
+float: left;
+}
+/*NAVEGAÇÃO*/
+nav ul{
+    list-style-type: none;
+    margin: 20px;
+    float: right;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    margin-right: 23px;
+    text-transform: uppercase;
+}
+
+/*FOOTER*/
+#footer{
+    clear: both;
+    text-align: center;
+}
+#footer a{
+    color: #000000;
+}
+#footer a:hover{
+    border-bottom: 1px solid #535858;
+}

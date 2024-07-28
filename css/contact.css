@@ -1,0 +1,42 @@
+/*Titulo*/
+#container h1{
+    text-align: center;
+}
+/*Formulario*/
+#form{
+    width: 60%;
+    margin-left: 20%;
+    float: left;
+}
+#form h2,input{
+    margin: 0 auto;
+}
+#form h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+#form input{
+    width: 100%;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    border-color: #0000004e;
+    box-shadow: 0 1.5px #0000007a;
+}
+/*Botão de confirmar*/
+#submit{
+    margin-left: 35%;
+    width: 30%;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+}
+#submit:hover{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #0004ff42;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+

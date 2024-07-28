@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/buyPassage.css">
+    <link rel="stylesheet" href="../css/contact.css"><!--aproveitei o css do contact porque eles tem praticamente as mesmas coisas-->
+</head>
+<body>
+    <div id="container">
+    <header>
+        <div id="logo"><h1><a href="../index.html">UP</a></h1></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../views/contact.html">Contato</a></li>
+                <li><a href="../views/about.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <form id="form">
+            <h1>Confirme as informações da viagem</h1>
+            <div id="travelInformations">
+                <h2>Destino: <span id="destiny"></span></h2>
+                <h2>Origem: <span id="origin"></span></h2>
+                <h2>Valor: R$ <span id="cost"></span></h2>
+            </div>
+            <h1>Confirme os dados da compra</h1>
+            <h2>Escolha a data da viagem:</h2>
+            <input type="date">
+            <h2>Digite quantas passagens deseja:</h2>
+            <input type="number" id="quantity" value="0">
+            <h2>Digite o número do cartão:</h2>
+            <input type="number">
+            <h2>Digite a senha:</h2>
+            <input type="password">
+            <h2>Custo total: R$ <span id="totalCost">0</span></h2>
+            <button id="submit" onclick="confirmPurchase()">Confirmar Compra</button>
+        </form>
+
+
+
+    </main >
+
+
+    
+    
+    </div>
+    <footer id="footer">
+        <p>
+            <a href="../index.html">Home</a>
+            <a href="../views/about.html">Sobre nós</a>
+            <a href="../views/contact.html">Contatos</a>
+        </p>
+        <p>2024 <a href="../index.html">UP</a> - Todos os direitos reservados &copy;</p>
+    </footer>
+
+
+
+    <!--Adicionar o link do js-->
+    <script src="../js/travels.js"></script>
+    <script src="../js/buyPassage.js"></script>
+</body>
+</html>

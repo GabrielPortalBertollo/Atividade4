@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+    <div id="container">
+    <header>
+        <div id="logo"><h1><a href="#">UP</a></h1></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="views/contact.html">Contato</a></li>
+                <li><a href="views/about.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <h2 id="introduction">Você em altas aventuras com segurança e conforto por todo o mundo.</h2>
+        <section id="search">
+            <p>Origem: </p>
+            <select name="origin" id="origin">
+                <option value="0" selected>Sem filtro</option>
+            </select>
+            <p>Destino: </p>
+            <select name="location" id="location">
+                <option value="0" selected>Sem filtro</option>
+            </select>
+            <button id="button" onclick="search()">Pesquisar</button>
+        </section>
+        <hr id="row">
+        <h2 id="titleResults">Viagens disponíveis</h2>
+        <section id="result">        
+        </section>
+    </main >
+
+
+    
+    
+    </div>
+    <footer id="footer">
+        <p>
+            <a href="#">Home</a>
+            <a href="views/about.html">Sobre nós</a>
+            <a href="views/contact.html">Contatos</a>
+        </p>
+        <p>2024 <a href="#">UP</a> - Todos os direitos reservados &copy;</p>
+    </footer>
+
+
+
+    <script src="js/travels.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
