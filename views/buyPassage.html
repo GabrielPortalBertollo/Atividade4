@@ -17,6 +17,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../views/contact.html">Contato</a></li>
                 <li><a href="../views/about.html">Sobre nós</a></li>
+                <li><a href="./cart.html">Carrinho</a></li>
             </ul>
         </nav>
     </header>
@@ -33,12 +34,8 @@
             <input type="date">
             <h2>Digite quantas passagens deseja:</h2>
             <input type="number" id="quantity" value="0">
-            <h2>Digite o número do cartão:</h2>
-            <input type="number">
-            <h2>Digite a senha:</h2>
-            <input type="password">
             <h2>Custo total: R$ <span id="totalCost">0</span></h2>
-            <button id="submit" onclick="confirmPurchase()">Confirmar Compra</button>
+            <button id="submit" onclick="confirmPurchase()">Adicionar ao carrinho</button>
         </form>
 
 
@@ -61,7 +58,6 @@
 
 
     <!--Adicionar o link do js-->
-    <script src="../js/travels.js"></script>
     <script src="../js/buyPassage.js"></script>
 </body>
 </html>

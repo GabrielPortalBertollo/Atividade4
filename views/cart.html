@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/general.css">
+</head>
+<body>
+    
+    <div id="container">
+        <header>
+            <div id="logo"><h1><a href="../index.html">UP</a></h1></div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./contact.html">Contato</a></li>
+                    <li><a href="./about.html">Sobre nós</a></li>
+                    <li><a href="#">Carrinho</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <h1 id="title">Seu Carrinho</h1>
+
+            <section id="cart">
+                <!--Aqui é onde vai ser montado a tela de que não tem nada no carrinho ou dos itens no carrinho com o total-->
+                <!--Montando o html por aqui primeiro para ter noção de como ira ficar para depois montar pelo js-->
+                <div class="passagesContainer">
+                    <div class="informationsContainer">
+                        <h2>Origem: Porto Alegre</h2>
+                        <h2>Destino: Rio de Janeiro</h2>
+                        <h2 class="h2Total0">Total: R$450</h2>
+                    </div>
+                    <div class="passagesCRUD">
+                        <button class="normalButton" value="0">-</button>
+                        <h2 class="h2Quantity0">3</h2><!--os 0 são para representar o id da compra que será salvo para identificação e manipulação-->
+                        <button class="normalButton" value="0">+</button>
+                        <button class="removeButton" value="0">Remover</button>
+                    </div>
+                </div>
+            </section>
+            <section id="formBuyPassages">
+                <!--Aqui é onde vai ser montado o formulario para colocar a senha do cartão e o botão de confirmar compra caso tenha algo no carrinho -->
+                <!--Montando o html por aqui primeiro para ter noção de como ira ficar para depois montar pelo js-->
+                <h2 id="total">Total: R$1350,00</h2>
+                <input type="number" class="inputPayment" placeholder="Número do cartão">
+                <input type="password" class="inputPayment" placeholder="Senha do cartão">
+                <div id="paymentDestination">
+                <button id="confirmBuy">Confirmar pagamento</button>
+                <button id="cancelBuy">Esvaziar carrinho</button>
+                </div>
+            </section>
+
+        </main>
+        </div>
+        <footer id="footer">
+            <p>
+                <a href="../index.html">Home</a>
+                <a href="./about.html">Sobre nós</a>
+                <a href="./contact.html">Contatos</a>
+            </p>
+            <p>2024 <a href="../index.html">UP</a> - Todos os direitos reservados &copy;</p>
+        </footer>
+    
+    
+    
+        <script src="js/index.js"></script>
+
+
+</body>
+</html>
