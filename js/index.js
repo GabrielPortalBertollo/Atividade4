@@ -16,7 +16,6 @@ function setTravels(){
         }
     }
     ajax.send()
-    console.log(travel)
 }
 
 

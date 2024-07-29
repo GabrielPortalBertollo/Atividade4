@@ -4,10 +4,12 @@ body{
     margin: 0;
 }
 header{
-    height: 70px;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
 }
 #container{
-    width: 100%;
     margin: 0 auto;
     min-height: 91vh;
 }
@@ -27,20 +29,16 @@ header a:hover{
 #logo{
 margin-left: 20px;
 font-size: 25px;
-float: left;
 }
 /*NAVEGAÇÃO*/
 nav ul{
     list-style-type: none;
     margin: 20px;
-    float: right;
-}
-nav ul li{
-    float: left;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 nav ul li a{
-    display: block;
-    margin-right: 23px;
+    margin-right: 1rem;
     text-transform: uppercase;
 }
 
@@ -54,4 +52,14 @@ nav ul li a{
 }
 #footer a:hover{
     border-bottom: 1px solid #535858;
+}
+
+
+@media screen and (max-width: 490px){
+    nav ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    nav ul li{
+        margin-bottom: 1rem;
+    }
 }
