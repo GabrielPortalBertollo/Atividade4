@@ -22,19 +22,18 @@
     button{
         cursor: pointer;
     }
-
-    .normalButton{
-        background: none;
-        border: none;
-        font-size: 2.5rem;
-        margin: 0 5%;
-    }
-    .removeButton{
-        background-color: red;
-        border: none;
-        border-radius: 100px;
-        padding: 1%;
-    }
+}
+.normalButton{
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    margin: 0 5%;
+}
+.removeButton{
+    background-color: red;
+    border: none;
+    border-radius: 100px;
+    padding: 1%;
 }
 
 
@@ -52,6 +51,7 @@
     border: none;
     border-radius: 100px;
     margin-bottom: 1%;
+    font-size: 1rem;
 }
 #paymentDestination{
     width: 100%;
@@ -67,6 +67,10 @@
         font-size: 1rem;
         color: #fff;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
 }
 #confirmBuy{
     background-color: green;
@@ -76,3 +80,7 @@
 }
 
 /*Carrinho Vazio*/
+
+#noItens{
+    text-align: center;
+}

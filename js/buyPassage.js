@@ -1,19 +1,5 @@
 let originalCost=0;
-//abaixo lembrar de mudar
-//abaixo lembrar de mudar
-//abaixo lembrar de mudar
-//abaixo lembrar de mudar
-/* Alterar esta função para salvar no localhost e depois enviar para o carrinho */
-function confirmPurchase() {
-    if (confirm("Deseja confirmar a compra destas passagens?")){
-        alert("Compra realizada com sucesso. Voltando para a página inicial.")
-        window.location.href = "../index.html";
-    }
-    else{
-        event.preventDefault();
-    }
-    
-}
+
 
 let quantity=document.getElementById("quantity")//linkando o elemento com id quantity em uma variavel para adicionar um evento
 quantity.addEventListener('change', () => {

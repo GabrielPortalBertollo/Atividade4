@@ -31,11 +31,11 @@
             </div>
             <h1>Confirme os dados da compra</h1>
             <h2>Escolha a data da viagem:</h2>
-            <input type="date">
+            <input type="date" id="inputDate">
             <h2>Digite quantas passagens deseja:</h2>
             <input type="number" id="quantity" value="0">
             <h2>Custo total: R$ <span id="totalCost">0</span></h2>
-            <button id="submit" onclick="confirmPurchase()">Adicionar ao carrinho</button>
+            <button id="submit" type="button" onclick="confirmAddCart()">Adicionar ao carrinho</button>
         </form>
 
 
@@ -58,6 +58,7 @@
 
 
     <!--Adicionar o link do js-->
+    <script src="../js/localStorage.js"></script>
     <script src="../js/buyPassage.js"></script>
 </body>
 </html>
